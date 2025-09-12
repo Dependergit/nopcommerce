@@ -85,5 +85,20 @@ public class loginSteps {
 	   driver.close();
 	   driver.quit();
 	}
+	
+	// invalid credentials
+	@When("User enter invalid credentails email {string} and password {string}")
+	public void user_enter_invalid_credentails_email_and_password(String invalidusername, String invalidpassowrd) throws InterruptedException 
+	{
+		lp.enterusername(invalidusername);
+		lp.enterpassowrd(invalidpassowrd);
+	}
+	
+	@When("User enter valid credentials email {string} and password {string}")
+	public void user_enter_valid_credentials_email_and_password(String username, String password) throws InterruptedException 
+	{
+	   lp.enterusername(username);
+	   lp.enterpassowrd(password);
+	}
 
 }

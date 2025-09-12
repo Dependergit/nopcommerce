@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="111.815" tests="5" skipped="0" failures="3" errors="0">
+<testcase classname="Login" name="Successful Login with Valid Credentials" time="34.42">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user opens URL.........................................................passed
+And User enter valid credentails email "admin@yourstore.com" and password "admin".passed
+And User click on loginbutton...............................................passed
+Then Admin title should be displayed "Dashboard / nopCommerce administration".passed
+When User click on logout button............................................passed
+Then Login page title should displayed "nopCommerce demo store. Login"......passed
+And Close browser...........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Successful Login with inValid Credentials" time="16.796">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;[nopCommerce demo store. Logi]n&gt; but was:&lt;[Dashboard / nopCommerce administratio]n&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<[nopCommerce demo store. Logi]n> but was:<[Dashboard / nopCommerce administratio]n>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepsDefinitions.loginSteps.admin_title_should_be_displayed(loginSteps.java:66)
+	at ✽.Admin title should be displayed "Dashboard / nopCommerce administration"(file:///C:/Users/LENOVO%20PC/eclipseworkspace/nopcommerce/resources/Features/Login.feature:18)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user opens URL.........................................................passed
+And User enter invalid credentails email "adminn@yourstore.com" and password "adminn".passed
+And User click on loginbutton...............................................passed
+Then Admin title should be displayed "Dashboard / nopCommerce administration".failed
+When User click on logout button............................................skipped
+Then Login page title should displayed "nopCommerce demo store. Login"......skipped
+And Close browser...........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Successful Login with Valid using scenario outline Credentials - Example #1.1" time="27.116">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user opens URL.........................................................passed
+And User enter valid credentials email "admin@yourstore.com" and password "admin".passed
+And User click on loginbutton...............................................passed
+Then Admin title should be displayed "Dashboard / nopCommerce administration".passed
+When User click on logout button............................................passed
+Then Login page title should displayed "nopCommerce demo store. Login"......passed
+And Close browser...........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Successful Login with Valid using scenario outline Credentials - Example #1.2" time="15.704">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;[nopCommerce demo store. Logi]n&gt; but was:&lt;[Dashboard / nopCommerce administratio]n&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<[nopCommerce demo store. Logi]n> but was:<[Dashboard / nopCommerce administratio]n>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepsDefinitions.loginSteps.admin_title_should_be_displayed(loginSteps.java:66)
+	at ✽.Admin title should be displayed "Dashboard / nopCommerce administration"(file:///C:/Users/LENOVO%20PC/eclipseworkspace/nopcommerce/resources/Features/Login.feature:28)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user opens URL.........................................................passed
+And User enter valid credentials email "test1@yourstore.com" and password "test123".passed
+And User click on loginbutton...............................................passed
+Then Admin title should be displayed "Dashboard / nopCommerce administration".failed
+When User click on logout button............................................skipped
+Then Login page title should displayed "nopCommerce demo store. Login"......skipped
+And Close browser...........................................................skipped
+]]></system-out>
+</testcase>
+<testcase classname="Login" name="Successful Login with Valid using scenario outline Credentials - Example #1.3" time="17.205">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;[nopCommerce demo store. Logi]n&gt; but was:&lt;[Dashboard / nopCommerce administratio]n&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<[nopCommerce demo store. Logi]n> but was:<[Dashboard / nopCommerce administratio]n>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at stepsDefinitions.loginSteps.admin_title_should_be_displayed(loginSteps.java:66)
+	at ✽.Admin title should be displayed "Dashboard / nopCommerce administration"(file:///C:/Users/LENOVO%20PC/eclipseworkspace/nopcommerce/resources/Features/Login.feature:28)
+]]>
+</failure>
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user opens URL.........................................................passed
+And User enter valid credentials email "test2@yourstore.com" and password "pass456".passed
+And User click on loginbutton...............................................passed
+Then Admin title should be displayed "Dashboard / nopCommerce administration".failed
+When User click on logout button............................................skipped
+Then Login page title should displayed "nopCommerce demo store. Login"......skipped
+And Close browser...........................................................skipped
+]]></system-out>
+</testcase>
+</testsuite>

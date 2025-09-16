@@ -1,25 +1,20 @@
 package stepsDefinitions;
 
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import PageObjects.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class loginSteps {
+public class loginSteps extends Base {
 
-	WebDriver driver;
+	//WebDriver driver;
 	LoginPage lp;
-	
+		
 	@Given("User Launch Chrome browser")
 	public void user_launch_chrome_browser() 
 	{
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
+		
 		lp= new LoginPage(driver);
 		
 	}
@@ -27,7 +22,8 @@ public class loginSteps {
 	@When("user opens URL")
 	public void user_opens_url()
 	{
-	   driver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
+	  driver.get(url);
+		//driver.get("https://admin-demo.nopcommerce.com/login?ReturnUrl=%2Fadmin%2F");
 	}
 
 	@When("User enter valid credentails email {string} and password {string}")

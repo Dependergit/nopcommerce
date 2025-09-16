@@ -14,7 +14,7 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 			//	tags = "@RunThis",
 		dryRun = false,
 		monochrome = true,
-		plugin = {"pretty","summary", "html:target/cucumber-html-report","json:target/cucumber.json",
+		plugin = {"pretty","summary","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:", "html:target/cucumber-html-report","json:target/cucumber.json",
                 "junit:target/cucumber.xml"}
 		
 		

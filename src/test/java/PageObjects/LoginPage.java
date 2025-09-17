@@ -34,6 +34,11 @@ public class LoginPage
     @FindBy(xpath = "//title[normalize-space()='nopCommerce demo store. Login']")
     WebElement loginpagetitle;
     
+    @FindBy(xpath = "//div[@class='message-error validation-summary-errors']")
+    WebElement Errortext;
+    
+    @FindBy(xpath = "//input[@id='RememberMe']")
+    WebElement checkbox;
    
     public void enterusername(String uname) throws InterruptedException
     {
@@ -79,5 +84,29 @@ public class LoginPage
     	//Logoutbutton.click();
     }
 	
+  public String errortext()
+  {
+	 return Errortext.getText();
+	  
+  }
   
+  public Boolean usernamefielddisplayed()
+  {
+	  return Logininput.isDisplayed();
+  }
+  
+  public Boolean passwordfielddisplayed()
+  {
+	  return Passwordinput.isDisplayed();
+  }
+  
+  public Boolean loginbuttondispalyed()
+  {
+	  return Loginbutton.isDisplayed();
+  }
+  
+  public Boolean checkboxdispalyed()
+  {
+	  return checkbox.isDisplayed();
+  }
 }
